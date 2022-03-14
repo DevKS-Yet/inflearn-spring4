@@ -163,3 +163,17 @@
   - HTML에서 `checked` 속성은 `checked` 속성의 값과 상관없이 `checked`라는 속성만 있어도 체크가 된다. 이런 부분은 `true`, `false` 값을 주로 사용하는 개발자 입장에서는 불편하다.
   - 타임리프의 `th:checked`는 값이 `false`인 경우 `checked`라는 속성 자체를 제거한다.
   - `<input type="checkbox" name="active" th:checked="false" />` -> `<input type="checkbox" name="active" />`
+
+#### 반복
+- 반복 기능
+  - `<tr th:each="user : ${users}>`
+  - `th:each`는 `List`뿐만 아니라 배열, `java.util.Iterable`, `java.util.Enumeration`을 구현한 모든 객체를 반복에 사용할 수 있습니다. `Map`도 사용할 수 있는데 이 경우 변수에 담기는 값은 `Map.Entry`입니다.
+- 반복 상태 유지
+  - `<tr th:each="user, userStat : ${users}">`
+  - 반복 상태 유지 기능
+    - `index`: 0부터 시작하는 값
+    - `count`: 1부터 시작하는 값
+    - `size`: 전체 사이즈
+    - `even`, `odd`: 홀수, 짝수 여부(`boolean`)
+    - `first`, `last`: 처음, 마지막 여부(`boolean`)
+    - `current`: 현재 객체
