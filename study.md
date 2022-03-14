@@ -82,3 +82,14 @@
     - `userMap['userA'].getUsername()`: Map에서 userA를 찾고 메서드 직접 호출
 - 지역 변수 선언
   - `th:with`를 사용하면 지역 변수를 선언해서 사용할 수 있다. 지역 변수는 선언한 태그 안에서만 사용할 수 있다.
+
+#### 기본 객체들
+- 기본 객체들
+  - `${#request}`
+  - `${#response}`
+  - `${#session}`
+  - `${#servletContext}`
+  - `${#locale}`
+- HTTP 요청 파라미터 접근: `param`
+- HTTP 세션 접근: `session`
+- 스프링 빈 접근: `@`
