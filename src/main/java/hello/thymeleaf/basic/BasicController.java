@@ -120,4 +120,11 @@ public class BasicController {
         return "basic/operation";
     }
 
+    // 속성 값 설정
+    @GetMapping("/attribute")
+    public String attribute() {
+        log.info("attribute");
+        return "basic/attribute";
+    }
+
 }
