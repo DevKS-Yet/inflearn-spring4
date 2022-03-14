@@ -20,6 +20,7 @@ import java.util.Map;
 @RequestMapping("/basic")
 public class BasicController {
 
+    // 텍스트 - text, utext
     @GetMapping("/text-basic")
     public String textBasic(Model model) {
         log.info("textBasic - model = {}", model);
@@ -27,6 +28,7 @@ public class BasicController {
         return "basic/text-basic";
     }
 
+    // 텍스트 - text, utext
     @GetMapping("/text-unescaped")
     public String textUnescaped(Model model) {
         log.info("text-unescaped - model = {}", model);
@@ -34,6 +36,7 @@ public class BasicController {
         return "basic/text-unescaped";
     }
 
+    // 변수 - SpringEL
     @GetMapping("/variable")
     public String variable(Model model) {
         log.info("variable - model = {}", model);
@@ -67,6 +70,7 @@ public class BasicController {
         }
     }
 
+    // 기본 객체들
     @GetMapping("/basic-objects")
     public String basicObjects(HttpSession session) {
         log.info("basicObjects - session = {}", session);
@@ -82,6 +86,7 @@ public class BasicController {
         }
     }
 
+    // 유틸리티 객체와 날짜
     @GetMapping("/date")
     public String date(Model model) {
         log.info("date - model = {}", model);
