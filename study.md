@@ -64,3 +64,21 @@
 - `th:inline="none"`: 타임리프는 `[[...]]`를 해석하기 때문에, 화면에 `[[...]]`글자를 보여줄 수 없다. 이 태그 안에서는 타임리프가 해석하지 말라는 옵션이다.
 > 주의!  
 > 실제 서비스를 개발하다 보면 escape를 사용하지 않아서 HTML이 정상 렌더링 되지 않는 수 많은 문제가 발생한다. escape를 기본으로 하고, 꼭 필요한 때만 unescape를 사용하자
+
+#### 변수 - SpringEL
+- 변수 표현식 : `${...}`
+- SpringEL 다양한 표현식 사용
+  - Object
+    - `user.username`: user의 username을 프로퍼티 접근 -> `user.getUsername()`
+    - `user['username']`: 위와 같음 -> `user.getUsername()`
+    - `user.getUsername()`: user의 `getUsername()`을 직접 호출
+  - List
+    - `users[0].username`: List에서 첫 번째 회원을 찾고 username 프로퍼티 접근 -> `list.get(0).getUsername()`
+    - `users[0]['username']`: 위와 같음
+    - `users[0].getUsername()`: List에서 첫 번째 회원을 찾고 메서드 직접 호출
+  - Map
+    - `userMap['userA'].username`: Map에서 userA를 찾고, username 프로퍼티 접근 -> `map.get("userA").getUsername()`
+    - `userMap['userA']['username']`: 위와 같음
+    - `userMap['userA'].getUsername()`: Map에서 userA를 찾고 메서드 직접 호출
+- 지역 변수 선언
+  - `th:with`를 사용하면 지역 변수를 선언해서 사용할 수 있다. 지역 변수는 선언한 태그 안에서만 사용할 수 있다.
