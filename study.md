@@ -1,0 +1,32 @@
+## 2022-03-14
+
+#### 프로젝트 생성
+- 프로젝트 생성 관련 옵션
+  - 프로젝트 선택
+    - Project: Gradle Project
+    - Language: Java
+    - Spring Boot: 2.6.4
+  - Project Metadata
+    - Group: Hello
+    - Artifact: thymeleaf-basic
+    - Name: thymeleaf-basic
+    - Package name: hello.thymeleaf
+    - Packaging: Jar
+    - Java: 11
+  - Dependencies
+    - Spring Web
+    - Lombok
+    - Thymeleaf
+- 동작 확인
+  - 기본 메인 클래스 실행
+  - http://localhost:8080 을 호출하였을 시 Whitelabel Error Page가 뜨면 됨
+- 세팅
+  - 최근 IntelliJ 버전은 Gradle을 통해서 실행 하는 것이 기본 설정이다. 이렇게 하면 실행속도가 느리다. 다음과 같이 변경하면 자바로 바로 실행해서 실행속도가 더 빠르다
+    - File -> Setting -> Build, Execution, Deployment -> Build Tools -> Gradle
+      - Build and run using: Gradle -> IntelliJ IDEA
+      - Run tests using: Gradle -> IntelliJ IDEA
+  - 롬복 적용
+    - File -> Setting -> plugin -> lombok 검색 실행 (재시작)
+    - File -> Setting -> Annotation Processors 검색 -> Enable annotation processing 체크 (재시작)
+- Postman 설치
+  - https://www.postman.com/downloads
