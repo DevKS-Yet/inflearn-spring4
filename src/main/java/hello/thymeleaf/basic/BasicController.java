@@ -145,4 +145,12 @@ public class BasicController {
         model.addAttribute("users", list);
     }
 
+    // 조건부 평가
+    @GetMapping("/condition")
+    public String condition(Model model) {
+        log.info("condition - model = {}", model);
+        addUsers(model);
+        return "basic/condition";
+    }
+
 }

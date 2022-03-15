@@ -177,3 +177,10 @@
     - `even`, `odd`: 홀수, 짝수 여부(`boolean`)
     - `first`, `last`: 처음, 마지막 여부(`boolean`)
     - `current`: 현재 객체
+
+## 2022-03-15
+
+#### 조건부 평가
+- if - 만약 조건이 `true`라면 `th:text`을 렌더링하고 `false`라면 렌더링하지 않는다
+- unless - `if`의 반대이다. `false`라면 `th:text`을 렌더링하고 `true`라면 렌더링하지 않는다
+- switch - `java`의 `switch`문과 동일하다. `*`는 만족하는 조건이 없을 때 사용하는 디폴트이다
