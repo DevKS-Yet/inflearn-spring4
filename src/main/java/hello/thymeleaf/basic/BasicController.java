@@ -153,4 +153,12 @@ public class BasicController {
         return "basic/condition";
     }
 
+    // 주석
+    @GetMapping("/comments")
+    public String comments(Model model) {
+        log.info("comments - model = {}", model);
+        model.addAttribute("data", "Spring!");
+        return "basic/comments";
+    }
+
 }
