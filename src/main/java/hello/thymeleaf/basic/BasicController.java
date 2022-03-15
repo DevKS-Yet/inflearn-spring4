@@ -161,4 +161,12 @@ public class BasicController {
         return "basic/comments";
     }
 
+    // 블록
+    @GetMapping("/block")
+    public String block(Model model) {
+        log.info("block - model = {}", model);
+        addUsers(model);
+        return "basic/block";
+    }
+
 }
