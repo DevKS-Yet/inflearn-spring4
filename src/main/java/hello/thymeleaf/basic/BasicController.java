@@ -169,4 +169,13 @@ public class BasicController {
         return "basic/block";
     }
 
+    // 자바스크립트 인라인
+    @GetMapping("/javascript")
+    public String javascript(Model model) {
+        log.info("javascript - model = {}", model);
+        model.addAttribute("user", new User("userA", 10));
+        addUsers(model);
+        return "basic/javascript";
+    }
+
 }
