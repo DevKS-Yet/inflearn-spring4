@@ -221,3 +221,5 @@
   - 인라인 사용 후는 객체를 JSON으로 변환해준다.
 - 자바스크립트 인라인 each
   - `[# th:each="..."]`과 `[/]`를 사용한다.
+- 참고
+  - https://www.javascript.com/learn/strings
