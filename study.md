@@ -223,3 +223,4 @@
   - `[# th:each="..."]`과 `[/]`를 사용한다.
 - 참고
   - https://www.javascript.com/learn/strings
+  - https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#javascript-inlining
