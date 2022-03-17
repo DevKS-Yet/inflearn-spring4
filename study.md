@@ -177,6 +177,7 @@
     - `even`, `odd`: 홀수, 짝수 여부(`boolean`)
     - `first`, `last`: 처음, 마지막 여부(`boolean`)
     - `current`: 현재 객체
+  - 따로 `status variable`을 지정하지 않았다면 `iteration variable` 이름 뒤에 자동적으로 `Stat`이 붙어서 만들어준다.
 
 ## 2022-03-15
 
