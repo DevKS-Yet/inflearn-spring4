@@ -225,3 +225,14 @@
 - 참고
   - https://www.javascript.com/learn/strings
   - https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#javascript-inlining
+
+## 2022-03-22
+
+#### 템플릿 조각
+- `th:fragment`를 통해 조각의 이름 및 매개변수를 설정한다.
+- `th:(insert/replace)="~{경로/경로/html명 :: 조각이름}"`으로 해당 html에 있는 `th:fragment="조각이름"`을 찾아온다
+- `th:insert`는 해당 태그 안에 삽입 시킨다
+- `th:replace`는 해당 태그를 템플릿 조각으로 바꾼다
+- 기본적으로 `~{...}`을 사용하는 것이 원칙이지만 템플릿 조각을 사용하는 코드가 단순하면 해당 `~{}`을 생략할 수 있다
+
+#### 템플릿 레이아웃1
